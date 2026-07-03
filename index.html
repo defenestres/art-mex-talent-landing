@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalos Corporativos Mexicanos Premium | Art Mex Talent</title>
+    <meta name="description" content="Regalos corporativos originales con arte mexicano contemporáneo. Prints personalizados desde 20 piezas. Solicita tu propuesta hoy.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        /* ── NAV ── */
+        header {
+            background: #1a1a1a;
+            color: white;
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 200;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 22px; font-weight: 700; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 28px; list-style: none; }
+        .nav-links a { color: #ccc; text-decoration: none; font-size: 14px; transition: color .2s; }
+        .nav-links a:hover { color: #d4af37; }
+        .nav-cta {
+            background: #d4af37;
+            color: #1a1a1a !important;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 92vh;
+        }
+        .hero-left {
+            background: #f7f4ef;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 60px 60px 80px;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: #d4af37;
+            color: #1a1a1a;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 3px;
+            margin-bottom: 24px;
+        }
+        .hero-left h1 {
+            font-size: 44px;
+            line-height: 1.2;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+        .hero-left p {
+            font-size: 17px;
+            color: #555;
+            margin-bottom: 36px;
+            max-width: 460px;
+            line-height: 1.8;
+        }
+        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn {
+            padding: 14px 32px;
+            font-size: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .25s;
+        }
+        .btn-gold { background: #d4af37; color: #1a1a1a; }
+        .btn-gold:hover { background: #c49d2e; transform: translateY(-2px); }
+        .btn-outline { background: transparent; color: #1a1a1a; border: 2px solid #1a1a1a; }
+        .btn-outline:hover { background: #1a1a1a; color: white; }
+
+        .hero-right {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-badge {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            background: rgba(26,26,26,.85);
+            color: white;
+            padding: 14px 20px;
+            border-radius: 6px;
+            font-size: 13px;
+            backdrop-filter: blur(4px);
+        }
+        .hero-badge strong { display: block; font-size: 22px; color: #d4af37; }
+
+        /* ── FORM STRIP ── */
+        .form-strip {
+            background: #1a1a1a;
+            padding: 50px 24px;
+        }
+        .form-strip-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .form-strip-text h2 { color: white; font-size: 30px; margin-bottom: 12px; }
+        .form-strip-text p { color: #aaa; font-size: 15px; line-height: 1.7; }
+        .form-strip form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .form-strip input,
+        .form-strip select {
+            padding: 12px 14px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            background: #2d2d2d;
+            color: white;
+            width: 100%;
+        }
+        .form-strip input::placeholder { color: #888; }
+        .form-strip input:focus,
+        .form-strip select:focus { outline: 2px solid #d4af37; }
+        .form-strip select option { background: #2d2d2d; }
+        .form-strip-submit {
+            grid-column: 1 / -1;
+            background: #d4af37;
+            color: #1a1a1a;
+            border: none;
+            padding: 14px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background .2s;
+        }
+        .form-strip-submit:hover { background: #c49d2e; }
+        .form-microcopy { grid-column: 1 / -1; color: #666; font-size: 12px; text-align: center; }
+
+        /* ── SECTION BASE ── */
+        .section { max-width: 1200px; margin: 0 auto; padding: 72px 24px; }
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #d4af37;
+            margin-bottom: 14px;
+        }
+        .section h2 { font-size: 36px; color: #1a1a1a; margin-bottom: 16px; }
+        .section > p { color: #666; font-size: 16px; max-width: 620px; line-height: 1.8; margin-bottom: 48px; }
+
+        /* ── USE CASES ── */
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .use-card {
+            border-top: 3px solid #d4af37;
+            padding: 28px 20px;
+            background: #fafafa;
+        }
+        .use-card-icon { font-size: 36px; margin-bottom: 16px; }
+        .use-card h3 { font-size: 17px; margin-bottom: 10px; color: #1a1a1a; }
+        .use-card p { font-size: 14px; color: #666; line-height: 1.7; }
+
+        /* ── GALLERY ── */
+        .gallery-bg { background: #f7f4ef; padding: 72px 0; }
+        .gallery-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 40px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s;
+        }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,.75));
+            color: white;
+            padding: 20px 14px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        .gallery-item:hover .gallery-caption { opacity: 1; }
+
+        /* ── PACKAGES ── */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 48px;
+        }
+        .pkg-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: box-shadow .3s;
+        }
+        .pkg-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,.12); }
+        .pkg-card.featured { border-color: #d4af37; box-shadow: 0 4px 20px rgba(212,175,55,.2); }
+        .pkg-img {
+            height: 220px;
+            overflow: hidden;
+        }
+        .pkg-img img { width: 100%; height: 100%; object-fit: cover; }
+        .pkg-body { padding: 28px; }
+        .pkg-badge {
+            display: inline-block;
+            background: #d4af37;
+            color: #1a1a1a;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 3px;
+            margin-bottom: 12px;
+        }
+        .pkg-body h3 { font-size: 20px; margin-bottom: 10px; color: #1a1a1a; }
+        .pkg-body p { font-size: 14px; color: #666; line-height: 1.7; margin-bottom: 20px; }
+        .pkg-features { list-style: none; margin-bottom: 24px; }
+        .pkg-features li {
+            font-size: 14px;
+            color: #555;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .pkg-features li::before { content: "✓ "; color: #d4af37; font-weight: 700; }
+        .pkg-cta {
+            width: 100%;
+            padding: 13px;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all .2s;
+            border: 2px solid #1a1a1a;
+            background: transparent;
+            color: #1a1a1a;
+        }
+        .pkg-cta:hover { background: #1a1a1a; color: white; }
+        .pkg-card.featured .pkg-cta {
+            background: #d4af37;
+            border-color: #d4af37;
+            color: #1a1a1a;
+        }
+        .pkg-card.featured .pkg-cta:hover { background: #c49d2e; border-color: #c49d2e; }
+
+        /* ── DIFFERENTIATORS ── */
+        .diff-bg { background: #1a1a1a; padding: 72px 24px; }
+        .diff-inner { max-width: 1200px; margin: 0 auto; }
+        .diff-inner .section-label { color: #d4af37; }
+        .diff-inner h2 { color: white; font-size: 36px; margin-bottom: 48px; }
+        .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .diff-item { border-left: 3px solid #d4af37; padding-left: 24px; }
+        .diff-item h3 { color: white; font-size: 18px; margin-bottom: 12px; }
+        .diff-item p { color: #aaa; font-size: 14px; line-height: 1.8; }
+
+        /* ── FAQ ── */
+        .faq-wrap { max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #e0e0e0; }
+        .faq-q {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 20px 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-q .arrow { font-size: 20px; color: #d4af37; transition: transform .3s; }
+        .faq-q.open .arrow { transform: rotate(45deg); }
+        .faq-a { display: none; padding: 0 0 20px; color: #666; font-size: 15px; line-height: 1.8; }
+        .faq-a.open { display: block; }
+
+        /* ── MODAL ── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,.7);
+            z-index: 500;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-overlay.active { display: flex; }
+        .modal {
+            background: white;
+            max-width: 680px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 8px;
+            position: relative;
+        }
+        .modal-img { height: 280px; overflow: hidden; }
+        .modal-img img { width: 100%; height: 100%; object-fit: cover; }
+        .modal-body { padding: 36px; }
+        .modal-body h2 { font-size: 26px; margin-bottom: 8px; }
+        .modal-body .modal-sub { color: #d4af37; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+        .modal-body p { color: #555; font-size: 15px; line-height: 1.8; margin-bottom: 20px; }
+        .modal-features { list-style: none; margin-bottom: 28px; }
+        .modal-features li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; color: #555; }
+        .modal-features li::before { content: "✓ "; color: #d4af37; font-weight: 700; }
+        .modal-flow { background: #f7f4ef; padding: 20px; border-radius: 6px; margin-bottom: 28px; }
+        .modal-flow h4 { font-size: 14px; font-weight: 700; margin-bottom: 14px; color: #1a1a1a; }
+        .flow-steps { display: flex; gap: 0; }
+        .flow-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+        .flow-step:not(:last-child)::after {
+            content: "→";
+            position: absolute;
+            right: -10px;
+            top: 14px;
+            color: #d4af37;
+            font-weight: 700;
+        }
+        .flow-num {
+            width: 32px;
+            height: 32px;
+            background: #d4af37;
+            color: #1a1a1a;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 8px;
+        }
+        .flow-step p { font-size: 12px; color: #555; line-height: 1.4; }
+        .modal-cta { width: 100%; padding: 14px; background: #d4af37; color: #1a1a1a; border: none; border-radius: 4px; font-size: 16px; font-weight: 700; cursor: pointer; transition: background .2s; }
+        .modal-cta:hover { background: #c49d2e; }
+        .modal-close {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            background: rgba(0,0,0,.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #111;
+            color: #aaa;
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 14px;
+        }
+        footer strong { color: white; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; }
+            .hero-right { height: 50vw; }
+            .hero-left { padding: 48px 24px; }
+            .hero-left h1 { font-size: 32px; }
+            .use-cases-grid { grid-template-columns: 1fr 1fr; }
+            .gallery-grid { grid-template-columns: 1fr 1fr; }
+            .packages-grid { grid-template-columns: 1fr; }
+            .diff-grid { grid-template-columns: 1fr; }
+            .form-strip-inner { grid-template-columns: 1fr; gap: 30px; }
+            .form-strip form { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+    <div class="header-content">
+        <div class="logo">Art Mex Talent</div>
+        <ul class="nav-links">
+            <li><a href="#ocasiones">Ocasiones</a></li>
+            <li><a href="#coleccion">Colección</a></li>
+            <li><a href="#paquetes">Paquetes</a></li>
+            <li><a href="#faq">Preguntas</a></li>
+            <li><a href="#cotiza" class="nav-cta">Cotizar</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-left">
+        <span class="hero-tag">Arte Mexicano Contemporáneo</span>
+        <h1>El regalo corporativo que nadie olvida</h1>
+        <p>Prints de artistas mexicanos emergentes, personalizados con tu marca. Desde 20 piezas, listos para entregar en todo México.</p>
+        <div class="hero-btns">
+            <a href="#cotiza" class="btn btn-gold">Solicitar propuesta</a>
+            <a href="#paquetes" class="btn btn-outline">Ver paquetes</a>
+        </div>
+    </div>
+    <div class="hero-right">
+        <img src="landing_images/mex1.jpg" alt="Arte mexicano contemporáneo para regalos corporativos">
+        <div class="hero-badge">
+            <strong>+20 piezas</strong>
+            Pedido mínimo corporativo
+        </div>
+    </div>
+</section>
+
+<!-- FORM STRIP (accesible, justo después del hero) -->
+<section class="form-strip" id="cotiza">
+    <div class="form-strip-inner">
+        <div class="form-strip-text">
+            <h2>Recibe tu propuesta en 24 horas</h2>
+            <p>Cuéntanos qué necesitas y te enviamos opciones, precios y tiempos de entrega sin compromiso.</p>
+        </div>
+        <form>
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="text" placeholder="Empresa" required>
+            <input type="email" placeholder="Email corporativo" required>
+            <input type="tel" placeholder="WhatsApp">
+            <select required>
+                <option value="">¿Cuántas piezas necesitas?</option>
+                <option>20–30 piezas</option>
+                <option>30–50 piezas</option>
+                <option>50–100 piezas</option>
+                <option>Más de 100</option>
+            </select>
+            <input type="text" placeholder="Ocasión (congreso, visita, fin de año…)">
+            <button type="submit" class="form-strip-submit">Enviar solicitud</button>
+            <p class="form-microcopy">Enviamos propuesta personalizada en menos de 24 horas hábiles</p>
+        </form>
+    </div>
+</section>
+
+<!-- OCASIONES DE USO -->
+<section class="section" id="ocasiones">
+    <p class="section-label">Casos de uso</p>
+    <h2>El regalo ideal para cada momento corporativo</h2>
+    <p>No son souvenirs genéricos. Son obras de arte con historia, diseñadas para representar lo mejor de México en cada ocasión.</p>
+    <div class="use-cases-grid">
+        <div class="use-card">
+            <div class="use-card-icon">🌍</div>
+            <h3>Visitas Internacionales</h3>
+            <p>Un detalle cultural premium para ejecutivos extranjeros. Ligero, elegante y fácil de llevar en equipaje de mano.</p>
+        </div>
+        <div class="use-card">
+            <div class="use-card-icon">🎤</div>
+            <h3>Congresos y Eventos</h3>
+            <p>Regalos memorables para speakers y asistentes VIP. Con empaque personalizado y tarjeta bilingüe.</p>
+        </div>
+        <div class="use-card">
+            <div class="use-card-icon">💼</div>
+            <h3>Clientes Clave</h3>
+            <p>Fideliza con arte mexicano contemporáneo. Una pieza que se queda en la oficina, no en el cajón.</p>
+        </div>
+        <div class="use-card">
+            <div class="use-card-icon">👥</div>
+            <h3>Onboarding de Equipos</h3>
+            <p>Bienvenidas con identidad y cultura para nuevos colaboradores, especialmente los que llegan de fuera.</p>
+        </div>
+    </div>
+</section>
+
+<!-- GALERÍA DE OBRAS -->
+<section class="gallery-bg" id="coleccion">
+    <div class="gallery-inner">
+        <p class="section-label">Colección disponible</p>
+        <h2>Obras de artistas mexicanos emergentes</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="landing_images/zapatas.jpg" alt="Zapatas – Arte mexicano contemporáneo">
+                <div class="gallery-caption">Zapatas</div>
+            </div>
+            <div class="gallery-item">
+                <img src="landing_images/soberania.jpg" alt="Soberanía Barroca – Cacho">
+                <div class="gallery-caption">Soberanía Barroca · Cacho</div>
+            </div>
+            <div class="gallery-item">
+                <img src="landing_images/quisiera_volar.jpg" alt="Quisiera Volar – Cacho">
+                <div class="gallery-caption">Quisiera Volar · Cacho</div>
+            </div>
+            <div class="gallery-item">
+                <img src="landing_images/frida.jpg" alt="Frida con Mono – Susana Sus Inventos">
+                <div class="gallery-caption">Frida con Mono · Susana Sus Inventos</div>
+            </div>
+            <div class="gallery-item">
+                <img src="landing_images/vestida.jpg" alt="Vestida para la Ocasión – Cacho">
+                <div class="gallery-caption">Vestida para la Ocasión · Cacho</div>
+            </div>
+            <div class="gallery-item">
+                <img src="landing_images/pudo_ser.jpg" alt="Pudo Ser – Cacho">
+                <div class="gallery-caption">Pudo Ser · Cacho</div>
+            </div>
+            <div class="gallery-item">
+                <img src="landing_images/tambien_corazon.jpg" alt="También Tengo Corazón – Cacho">
+                <div class="gallery-caption">También Tengo Corazón · Cacho</div>
+            </div>
+            <div class="gallery-item">
+                <img src="landing_images/mex1.jpg" alt="México – Arte contemporáneo">
+                <div class="gallery-caption">México · Colección general</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PAQUETES -->
+<section class="section" id="paquetes">
+    <p class="section-label">Paquetes corporativos</p>
+    <h2>Elige el paquete que mejor se adapta</h2>
+    <p>Todos los paquetes incluyen personalización de empaque y tarjeta. El pedido mínimo es de 20 piezas.</p>
+    <div class="packages-grid">
+
+        <div class="pkg-card">
+            <div class="pkg-img">
+                <img src="landing_images/quisiera_volar.jpg" alt="Paquete Esencial">
+            </div>
+            <div class="pkg-body">
+                <span class="pkg-badge">Esencial</span>
+                <h3>International Welcome Gift</h3>
+                <p>El detalle perfecto para visitas ejecutivas o eventos donde se busca un regalo funcional y con identidad.</p>
+                <ul class="pkg-features">
+                    <li>Print 18x24 cm o 30x40 cm</li>
+                    <li>Tarjeta cultural bilingüe</li>
+                    <li>Sleeve protector</li>
+                    <li>Empaque corporativo</li>
+                </ul>
+                <button class="pkg-cta" onclick="openModal('esencial')">Ver detalles y proceso</button>
+            </div>
+        </div>
+
+        <div class="pkg-card featured">
+            <div class="pkg-img">
+                <img src="landing_images/soberania.jpg" alt="Paquete Premium">
+            </div>
+            <div class="pkg-body">
+                <span class="pkg-badge">Más solicitado</span>
+                <h3>Premium Client Gift</h3>
+                <p>Para clientes clave y relaciones de largo plazo. Incluye empaque rígido y certificado de colección.</p>
+                <ul class="pkg-features">
+                    <li>Print mediano curado</li>
+                    <li>Empaque rígido premium</li>
+                    <li>Nota corporativa personalizada</li>
+                    <li>Certificado de colección</li>
+                </ul>
+                <button class="pkg-cta" onclick="openModal('premium')">Ver detalles y proceso</button>
+            </div>
+        </div>
+
+        <div class="pkg-card">
+            <div class="pkg-img">
+                <img src="landing_images/vestida.jpg" alt="Paquete Signature">
+            </div>
+            <div class="pkg-body">
+                <span class="pkg-badge">Signature</span>
+                <h3>Mexico Signature Collection</h3>
+                <p>Selección curada de obras para hospitality, congresos de alto nivel o regalos de fin de año ejecutivos.</p>
+                <ul class="pkg-features">
+                    <li>Selección curada 3-5 obras</li>
+                    <li>Empaque co-brandeado discreto</li>
+                    <li>Narrativa temática incluida</li>
+                    <li>Tarjeta de colección firmada</li>
+                </ul>
+                <button class="pkg-cta" onclick="openModal('signature')">Ver detalles y proceso</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- DIFERENCIADORES -->
+<section class="diff-bg">
+    <div class="diff-inner">
+        <p class="section-label">Por qué elegirnos</p>
+        <h2>Más que un promocional, una pieza de arte</h2>
+        <div class="diff-grid">
+            <div class="diff-item">
+                <h3>Identidad Cultural Auténtica</h3>
+                <p>Cada obra es de un artista mexicano emergente con historia y propósito. No son réplicas ni souvenirs de aeropuerto.</p>
+            </div>
+            <div class="diff-item">
+                <h3>Logística Corporativa Resuelta</h3>
+                <p>Facturación, empaque listo para entregar, tiempos de entrega comprometidos y envíos asegurados a todo México.</p>
+            </div>
+            <div class="diff-item">
+                <h3>Personalización No Invasiva</h3>
+                <p>Tu marca va en el empaque y la tarjeta, sin tocar la obra. El regalo se ve elegante, no como publicidad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+    <p class="section-label">Preguntas frecuentes</p>
+    <h2>Lo que más nos preguntan</h2>
+    <div class="faq-wrap">
+        <div class="faq-item">
+            <button class="faq-q" onclick="toggleFAQ(this)">
+                ¿Cuál es el pedido mínimo?
+                <span class="arrow">+</span>
+            </button>
+            <div class="faq-a">El pedido mínimo para paquetes corporativos es de 20 piezas. Esto nos permite garantizar la personalización, el empaque y los tiempos de entrega comprometidos.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-q" onclick="toggleFAQ(this)">
+                ¿Puedo personalizar el empaque con el logo de mi empresa?
+                <span class="arrow">+</span>
+            </button>
+            <div class="faq-a">Sí. Todos los paquetes incluyen personalización en el empaque exterior y tarjeta interior. La obra de arte se mantiene intacta; tu marca va en los elementos de presentación.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-q" onclick="toggleFAQ(this)">
+                ¿Hacen envíos a todo México?
+                <span class="arrow">+</span>
+            </button>
+            <div class="faq-a">Sí, realizamos entregas corporativas a todo México. También contamos con opciones para envíos internacionales en caso de que necesites entregar en otro país.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-q" onclick="toggleFAQ(this)">
+                ¿Los prints son fáciles de transportar en avión?
+                <span class="arrow">+</span>
+            </button>
+            <div class="faq-a">Sí. Los formatos 18x24 cm y 30x40 cm están diseñados para ser ligeros y resistentes. Caben en equipaje de mano o maleta documentada sin problema.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-q" onclick="toggleFAQ(this)">
+                ¿Cuánto tiempo tarda la entrega?
+                <span class="arrow">+</span>
+            </button>
+            <div class="faq-a">El tiempo estándar es de 3 a 6 semanas desde la aprobación de la propuesta, dependiendo del volumen y nivel de personalización. Contamos con opciones express para fechas ajustadas.</div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <strong>Art Mex Talent</strong> · Regalos Corporativos con Arte Mexicano Contemporáneo<br>
+    <span style="margin-top: 10px; display: inline-block;">Entregas a todo México · Desde 20 piezas · Personalización incluida</span>
+</footer>
+
+<!-- MODALES DE PAQUETES -->
+
+<!-- Modal Esencial -->
+<div class="modal-overlay" id="modal-esencial">
+    <div class="modal">
+        <button class="modal-close" onclick="closeModal('esencial')">×</button>
+        <div class="modal-img"><img src="landing_images/quisiera_volar.jpg" alt="International Welcome Gift"></div>
+        <div class="modal-body">
+            <p class="modal-sub">Paquete Esencial</p>
+            <h2>International Welcome Gift</h2>
+            <p>Ideal para empresas que reciben visitas internacionales frecuentes o participan en eventos donde se busca un regalo funcional, ligero y con identidad cultural mexicana.</p>
+            <ul class="modal-features">
+                <li>Print 18x24 cm o 30x40 cm (a elegir)</li>
+                <li>Tarjeta cultural bilingüe (español / inglés)</li>
+                <li>Sleeve protector resistente</li>
+                <li>Empaque corporativo con tu logo</li>
+                <li>Pedido mínimo: 20 piezas</li>
+            </ul>
+            <div class="modal-flow">
+                <h4>¿Cómo funciona el proceso?</h4>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="flow-num">1</div>
+                        <p>Envías tu solicitud con fecha y cantidad</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="flow-num">2</div>
+                        <p>Recibes propuesta con opciones de obra en 24 h</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="flow-num">3</div>
+                        <p>Apruebas diseño de empaque y tarjeta</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="flow-num">4</div>
+                        <p>Producción y entrega en 3–4 semanas</p>
+                    </div>
+                </div>
+            </div>
+            <button class="modal-cta" onclick="closeModal('esencial'); document.getElementById('cotiza').scrollIntoView({behavior:'smooth'})">Solicitar propuesta para este paquete</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Premium -->
+<div class="modal-overlay" id="modal-premium">
+    <div class="modal">
+        <button class="modal-close" onclick="closeModal('premium')">×</button>
+        <div class="modal-img"><img src="landing_images/soberania.jpg" alt="Premium Client Gift"></div>
+        <div class="modal-body">
+            <p class="modal-sub">Paquete Más Solicitado</p>
+            <h2>Premium Client Gift</h2>
+            <p>Para relaciones comerciales de largo plazo y clientes clave. Incluye empaque rígido y certificado de colección que eleva la percepción del regalo.</p>
+            <ul class="modal-features">
+                <li>Print mediano curado por el equipo</li>
+                <li>Empaque rígido premium</li>
+                <li>Nota corporativa personalizada</li>
+                <li>Certificado de colección</li>
+                <li>Tarjeta bilingüe con historia del artista</li>
+                <li>Pedido mínimo: 20 piezas</li>
+            </ul>
+            <div class="modal-flow">
+                <h4>¿Cómo funciona el proceso?</h4>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="flow-num">1</div>
+                        <p>Solicitud con fecha, cantidad y contexto del regalo</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="flow-num">2</div>
+                        <p>Propuesta con selección curada de obras en 24 h</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="flow-num">3</div>
+                        <p>Apruebas obra, empaque y texto de la nota</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="flow-num">4</div>
+                        <p>Producción y entrega en 4–5 semanas</p>
+                    </div>
+                </div>
+            </div>
+            <button class="modal-cta" onclick="closeModal('premium'); document.getElementById('cotiza').scrollIntoView({behavior:'smooth'})">Solicitar propuesta para este paquete</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Signature -->
+<div class="modal-overlay" id="modal-signature">
+    <div class="modal">
+        <button class="modal-close" onclick="closeModal('signature')">×</button>
+        <div class="modal-img"><img src="landing_images/vestida.jpg" alt="Mexico Signature Collection"></div>
+        <div class="modal-body">
+            <p class="modal-sub">Paquete Signature</p>
+            <h2>Mexico Signature Collection</h2>
+            <p>La opción más completa para congresos de alto nivel, hospitality premium o regalos de fin de año ejecutivos. Una experiencia cultural completa en cada caja.</p>
+            <ul class="modal-features">
+                <li>Selección curada de 3–5 obras por caja</li>
+                <li>Empaque co-brandeado discreto y elegante</li>
+                <li>Narrativa temática de la colección</li>
+                <li>Tarjeta de colección firmada por el artista</li>
+                <li>Opción de entrega directa en hotel o venue</li>
+                <li>Pedido mínimo: 25 piezas</li>
+            </ul>
+            <div class="modal-flow">
+                <h4>¿Cómo funciona el proceso?</h4>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="flow-num">1</div>
+                        <p>Briefing: evento, perfil del receptor, fecha</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="flow-num">2</div>
+                        <p>Propuesta temática curada en 48 h</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="flow-num">3</div>
+                        <p>Aprobación de obras, empaque y narrativa</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="flow-num">4</div>
+                        <p>Producción y entrega en 5–6 semanas</p>
+                    </div>
+                </div>
+            </div>
+            <button class="modal-cta" onclick="closeModal('signature'); document.getElementById('cotiza').scrollIntoView({behavior:'smooth'})">Solicitar propuesta para este paquete</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleFAQ(btn) {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
+        if (!isOpen) {
+            answer.classList.add('open');
+            btn.classList.add('open');
+        }
+    }
+
+    function openModal(id) {
+        document.getElementById('modal-' + id).classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+        document.getElementById('modal-' + id).classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Cerrar modal al hacer clic fuera
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+</script>
+</body>
+</html>
